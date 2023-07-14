@@ -1,6 +1,7 @@
 package com.rscruz.dslist.dto;
 
 import com.rscruz.dslist.entities.Game;
+import com.rscruz.dslist.projections.GameMinProjection;
 
 public class GameMinDTO {
 	
@@ -22,6 +23,16 @@ public class GameMinDTO {
 		imgUrl = entity.getImgUrl();
 		shortDescription = entity.getShortDescription();
 	}
+	
+	public GameMinDTO(GameMinProjection projection) {
+		
+		id = projection.getId();
+		title = projection.getTitle();
+		year = projection.getYear();
+		imgUrl = projection.getImgUrl();
+		shortDescription = projection.getShortDescription();
+	}
+
 
 	public long getId() {
 		return id;
