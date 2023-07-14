@@ -9,5 +9,4 @@ class DslistApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }
